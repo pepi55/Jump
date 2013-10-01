@@ -11,5 +11,10 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rigidbody.AddRelativeForce(Vector3.left * Time.deltaTime);
+		
+		if(Input.GetAxis())
+		{
+				
+		}
 	}
 }
