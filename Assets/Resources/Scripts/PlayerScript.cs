@@ -14,9 +14,12 @@ public class PlayerScript : MonoBehaviour {
 		{
 			float horizontalMovement = Input.GetAxis("Horizontal");
 			float verticalMovement = Input.GetAxis("Jump");
-			Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0.0f);
+			//Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0.0f);
 			
-			rigidbody.AddForce(movement * speed * Time.deltaTime);
+			if (horizontalMovement == 1)
+			{
+				
+			}
 		}
 	}
 }
