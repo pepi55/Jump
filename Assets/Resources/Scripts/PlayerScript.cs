@@ -2,10 +2,13 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
+	
 	public float speed = 10;
+	private SpriteAnimate sprAnim;
+	
 	// Use this for initialization
 	void Start () {
-	
+		sprAnim = GetComponent<SpriteAnimate>();
 	}
 	
 	// Update is called once per frame
@@ -14,12 +17,12 @@ public class PlayerScript : MonoBehaviour {
 		{
 			float horizontalMovement = Input.GetAxis("Horizontal");
 			float verticalMovement = Input.GetAxis("Jump");
-			//Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0.0f);
+			Vector2 move = new Vector2(horizontalMovement, 0f);
 			
-			if (horizontalMovement == 1)
-			{
-				
-			}
+			transform.Translate(move * speed * Time.deltaTime);
+			
+			if (horizontalMovement != 0)
+				sprAnim.animate(5, 2, 5, 24, 2, 0);
 		}
 	}
 }
