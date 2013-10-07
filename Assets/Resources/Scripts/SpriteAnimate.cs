@@ -8,14 +8,14 @@ public class SpriteAnimate : MonoBehaviour {
 	public int cells;
 	public int fps;
 	
-	public int row;
 	public int col;
+	public int row;
 	
 	string mainTex = "_MainTex";
 	
 	// Use this for initialization
 	void Start () {
-		renderer.material.SetTextureOffset(mainTex, new Vector2(row, col));
+	
 	}
 	
 	// Update is called once per frame
@@ -30,8 +30,8 @@ public class SpriteAnimate : MonoBehaviour {
 		float sizeY = 1f / rows;
 		Vector2 size = new Vector2(sizeX, sizeY);
 		
-		float offsetX = 1f / cols * uIndex;
-		float offsetY = 1f / rows * vIndex;
+		float offsetX = (uIndex + col) * size.x;
+		float offsetY = (vIndex + row) * size.y;
 		Vector2 offset = new Vector2(offsetX, offsetY);
 		
 		renderer.material.SetTextureScale(mainTex, size);
