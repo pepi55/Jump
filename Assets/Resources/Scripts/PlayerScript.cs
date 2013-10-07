@@ -20,6 +20,6 @@ public class PlayerScript : MonoBehaviour {
 		transform.Translate(move * speed * Time.deltaTime, Space.World);
 		
 		if (horizontalMovement != 0)
-			sprAnim.animate(5, 2, 5, 24, 2, 0);
+			sprAnim.animate(16, 16, 16, 12, 0, 14);
 	}
 }
