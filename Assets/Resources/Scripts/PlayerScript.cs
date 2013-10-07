@@ -3,23 +3,26 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 	public float speed = 10;
+	
+	private SpriteAnimate sprAnim;
 	// Use this for initialization
 	void Start () {
-	
+		SpriteAnimate = GetComponent<SpriteAnimate>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetAxis("Horizontal") == 1)
-		{
-			float horizontalMovement = Input.GetAxis("Horizontal");
-			float verticalMovement = Input.GetAxis("Jump");
-			//Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0.0f);
-			
-			if (horizontalMovement == 1)
-			{
+		
 				
+		
+			float x = -Input.GetAxis("Horizontal");
+			if(x !=0f)
+			{
+				sprAnim.Animate(5,2,0,0,5,2);	
 			}
+			Vector2 movement = new Vector2(x,0);
+		
+			transform.Translate(movement * speed * Time.deltaTime);
 		}
 	}
 }

@@ -3,23 +3,12 @@ using System.Collections;
 
 public class SpriteAnimate : MonoBehaviour {
 	
-	public int cols;
-	public int rows;
-	public int cells;
-	public int fps;
-	
-	public int col;
-	public int row;
-	
-	string mainTex = "_MainTex";
-	
-	// Use this for initialization
-	void Start () {
-	
-	}
+
+
 	
 	// Update is called once per frame
-	void Update () {
+	public void Animate ( int cols,  int rows,  int cells,	 int fps,	 int col,	 int row, string mainTex = "_MainTex")
+	{
 		int index = (int) (fps * Time.time);
 		index = index % cells;
 		
