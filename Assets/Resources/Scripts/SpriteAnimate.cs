@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SpriteAnimate : MonoBehaviour {
@@ -17,9 +17,10 @@ public class SpriteAnimate : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
-	public void animate (int cols, int rows, int cells, int fps, int row, int col) {
+	public void animate (int cols, int rows, int cells, int fps, int col, int row)
+	{
 		int index = (int) (fps * Time.time);
 		index = index % cells;
 		
