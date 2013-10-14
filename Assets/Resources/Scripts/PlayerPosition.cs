@@ -6,7 +6,7 @@ public class PlayerPosition : MonoBehaviour {
 	private Vector3 position;
 	// Use this for initialization
 	void Start () {
-		position = new Vector3(
+	
 	}
 	
 	// Update is called once per frame

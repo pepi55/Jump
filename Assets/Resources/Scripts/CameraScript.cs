@@ -12,10 +12,7 @@ public class CameraScript : MonoBehaviour {
 	}
 	void FixedUpdate()
 	{
-<<<<<<< HEAD
-		transform.position = player.transform.position + offset;
-=======
 		transform.position = target.transform.position + (offset * 0.5f);
->>>>>>> Fabian
+
 	}
 }
