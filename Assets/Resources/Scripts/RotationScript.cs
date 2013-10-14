@@ -27,6 +27,6 @@ public class RotationScript : MonoBehaviour {
 			
 		}
 		
-		Debug.Log(Input.GetAxis("Horizontal"));
+		//Debug.Log(Input.GetAxis("Horizontal"));
 	}
 }
