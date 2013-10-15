@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter (Collision col) {
-		if (col.collider.tag == Tags.collectible)
+		if (col.collider.tag == Tags.collectable)
 		{
 			Destroy(col.gameObject);
 		}

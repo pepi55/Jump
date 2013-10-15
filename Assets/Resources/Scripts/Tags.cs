@@ -1,18 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Tags : MonoBehaviour {
 
-	public const string collectible = "Collectable";
-	//public const string player = "Player";
-	
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public const string collectable = "Collectable";
+	public const string Einde = "Einde";
+	public const string Einde2 = "Einde2";
 }
