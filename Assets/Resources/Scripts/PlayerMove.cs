@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour {
 	void Start () {
 		Vector3 posXrht = transform.position;
 		
-		posXrht.x = Random.Range(-110, 110);
+		posXrht.x = Random.Range(-90, 90);
 		posXrht.z = -2;
 		transform.position = posXrht;
 	}
