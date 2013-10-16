@@ -7,23 +7,23 @@ public class PlayerMove : MonoBehaviour {
 	void Start () {
 		Vector3 posXrht = transform.position;
 		
-		posXrht.x = Random.Range(-20, 20);
+		posXrht.x = Random.Range(-110, 110);
 		posXrht.z = -2;
 		transform.position = posXrht;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < -450)
+		if (transform.position.y < -1500)
 		{
 			Application.LoadLevel("Win");
 		}
 	}
 	
-	void OnCollisionEnter (Collision col) {
-		if (col.collider.tag == Tags.collectable)
+	/*void OnCollisionEnter (Collision col) {
+		if (col.collider.tag == Tags.finish)
 		{
-			Destroy(col.gameObject);
+			Application.LoadLevel("Win"); 
 		}
-	}
+	}*/
 }
