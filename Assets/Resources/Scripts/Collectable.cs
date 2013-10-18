@@ -5,6 +5,7 @@ public class Collectable : MonoBehaviour {
 	
 	private int amount = 0;
 	public GUIText score;
+	public AudioClip coinhit;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,7 +22,7 @@ public class Collectable : MonoBehaviour {
 		{
 			amount += 1;
 			score.text = amount.ToString();
-			
+			audio.PlayOneShot(coinhit);
 			Destroy(col.gameObject);
 		}
 	}

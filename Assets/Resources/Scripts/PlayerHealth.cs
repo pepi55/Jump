@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 	public int Health = 100;
 	public GUIText HealthGUI;
+	public AudioClip hitobject;
 	// Use this for initialization
 	void Start () {
 	HealthGUI.text = "100";
@@ -19,6 +20,8 @@ public class PlayerHealth : MonoBehaviour {
 		if (col.collider.tag == Tags.obstacle)
 		{
 			Health -= 3;
+			audio.PlayOneShot(hitobject);
+			HealthGUI.text = Health.ToString();
 			
 		}
 	}
