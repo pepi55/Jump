@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 	
 	void OnCollisionEnter (Collision col) {
@@ -23,6 +23,11 @@ public class PlayerHealth : MonoBehaviour {
 			audio.PlayOneShot(hitobject);
 			HealthGUI.text = Health.ToString();
 			
+		}
+		if(Health <= 0)
+		{
+			Destroy(gameObject);
+			Application.LoadLevel("Lose");
 		}
 	}
 }
