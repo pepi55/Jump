@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < -1500)
+		if (transform.position.y < -0)
 		{
 			Application.LoadLevel("Win");
 		}

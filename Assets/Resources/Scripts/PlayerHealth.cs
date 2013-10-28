@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 		if (col.collider.tag == Tags.obstacle)
 		{
 			Health -= 3;
-			audio.PlayOneShot(hitobject);
+			audio.PlayOneShot(hitobject, 0.9f);
 			HealthGUI.text = Health.ToString();
 			
 		}
